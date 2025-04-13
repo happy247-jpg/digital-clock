@@ -17,6 +17,7 @@ When the page loads, the clock element is hidden. Clicking on the text "Hy I'm a
 
 ## File Structure
 
+click-to-show-clock/ ├── index.html # Main HTML file containing markup, styles, and JavaScript ├── README.md # Project documentation ├── LICENSE # (Optional) MIT License file ├── screenshot.png # (Optional) Screenshot preview of the UI └── .gitignore # (Optional) Git ignore file, if using Git
 
 ## Getting Started
 
