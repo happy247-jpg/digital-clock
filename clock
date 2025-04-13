@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click to Show Clock ,click ,me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f0f0;
+    }
+
+    #clickText {
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    #clock {
+      font-size: 48px;
+      color: #222;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="clickText">Hy I'm a clock ,click me</div>
+  <div id="clock"></div>
+
+  <script>
+    const clock = document.getElementById("clock");
+    const clickText = document.getElementById("clickText");
+
+    clickText.addEventListener("click", () => {
+      clock.style.display = "block";
+    });
+
+    function updateClock() {
+      const now = new Date();
+      let hours = String(now.getHours()).padStart(2, '0');
+      let minutes = String(now.getMinutes()).padStart(2, '0');
+      let seconds = String(now.getSeconds()).padStart(2, '0');
+      clock.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call
+  </script>
+
+</body>
+</html>
